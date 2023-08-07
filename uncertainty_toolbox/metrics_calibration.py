@@ -43,7 +43,7 @@ def root_mean_squared_calibration_error(
     num_bins: int = 100,
     vectorized: bool = False,
     recal_model: IsotonicRegression = None,
-    prop_type: str = "interval",
+    prop_type: str = "quantile",
 ) -> float:
     """Root mean squared calibration error.
 
@@ -93,7 +93,7 @@ def mean_absolute_calibration_error(
     num_bins: int = 100,
     vectorized: bool = False,
     recal_model: IsotonicRegression = None,
-    prop_type: str = "interval",
+    prop_type: str = "quantile",
 ) -> float:
     """Mean absolute calibration error; identical to ECE.
 
@@ -141,7 +141,7 @@ def adversarial_group_calibration(
     y_std: np.ndarray,
     y_true: np.ndarray,
     cali_type: str,
-    prop_type: str = "interval",
+    prop_type: str = "quantile",
     num_bins: int = 100,
     num_group_bins: int = 10,
     draw_with_replacement: bool = False,
@@ -240,7 +240,7 @@ def miscalibration_area(
     num_bins: int = 100,
     vectorized: bool = False,
     recal_model: Any = None,
-    prop_type: str = "interval",
+    prop_type: str = "quantile",
 ) -> float:
     """Miscalibration area.
 
@@ -335,7 +335,7 @@ def get_proportion_lists_vectorized(
     y_true: np.ndarray,
     num_bins: int = 100,
     recal_model: Any = None,
-    prop_type: str = "interval",
+    prop_type: str = "quantile",
 ) -> Tuple[np.ndarray, np.ndarray]:
     """Arrays of expected and observed proportions
 
@@ -399,7 +399,7 @@ def get_proportion_lists(
     y_true: np.ndarray,
     num_bins: int = 100,
     recal_model: IsotonicRegression = None,
-    prop_type: str = "interval",
+    prop_type: str = "quantile",
 ) -> Tuple[np.ndarray, np.ndarray]:
     """Arrays of expected and observed proportions
 

@@ -258,7 +258,7 @@ def plot_calibration(
     exp_props: Union[np.ndarray, None] = None,
     obs_props: Union[np.ndarray, None] = None,
     ax: Union[matplotlib.axes.Axes, None] = None,
-    prop_type: str = "interval",
+    prop_type: str = "quantile",
 ) -> matplotlib.axes.Axes:
     """Plot the observed proportion vs prediction proportion of outputs falling into a
     range of intervals, and display miscalibration area.
